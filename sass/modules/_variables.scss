@@ -1,0 +1,22 @@
+// colors
+$dark-blue: #006d77;
+$blue: #409299;
+$light-blue: #80b6bb;
+$cyan: #e8fbfd;
+$green: #99bb80;
+$gray: #919696;
+$color-error: #fa0101;
+
+// linear gradients
+$photo-glass: 80deg, rgba(0, 47, 51, 0.8) 11.79%, rgba(0, 109, 119, 0.33) 51.35%,
+  rgba(0, 109, 119, 0) 74.52%;
+
+// radial gradients
+$card-glass-bg: 52.24% 52.24% at 50.05% 47.76%, rgba(109, 149, 80, 0.8) 80%,
+  rgba(153, 187, 128, 0.95) 100%;
+$header-bg: 100% 516.28% at 1.18% 100%, #00282c 0%, #006d77 100%;
+
+// shadows
+$button-shadow: 1px 2px 3px rgba(49, 66, 36, 0.4);
+$card-shadow: 2px 4px 9px 2px rgba(0, 0, 0, 0.35);
+$card-glass-shadow: 0px 4px 4px rgba(153, 187, 128, 0.35);

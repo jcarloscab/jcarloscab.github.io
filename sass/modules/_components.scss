@@ -1,0 +1,275 @@
+// icons
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-size: 1.6rem;
+    color: $green;
+    padding: 0 10px;
+  }
+}
+
+.mini-icon {
+  width: 25px;
+  height: 25px;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+// Primary Button
+.button {
+  border-radius: 5px;
+  padding: 5px 10px;
+  outline: none;
+  border: 1px solid $blue;
+  background-color: transparent;
+  color: $blue;
+  font-size: 2.4rem;
+  text-align: center;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $blue;
+    color: $cyan;
+    cursor: pointer;
+  }
+}
+
+// Secundary Button
+.button-secundary {
+  background-color: $green;
+  color: $cyan;
+  border: none;
+  box-shadow: $button-shadow;
+
+  &:hover {
+    background-color: $cyan;
+    color: $green;
+  }
+}
+
+// Button from the glass of the card hover
+.glass-button {
+  padding: 8px 12px;
+  background-color: $light-blue;
+  color: $cyan;
+  border: none;
+  box-shadow: $button-shadow;
+  font-size: 1.4rem;
+
+  &:hover {
+    color: $dark-blue;
+    background-color: $light-blue;
+  }
+}
+
+// Card of the projects
+.project-card {
+  border-radius: 10px;
+  height: 345px;
+  overflow: hidden;
+  background-color: $cyan;
+  box-shadow: $card-shadow;
+  position: relative;
+
+  &:hover {
+    .project-card__glass {
+      bottom: 30%;
+    }
+  }
+
+  &__img-container {
+    display: block;
+    width: 100%;
+    height: 259px;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 5px;
+  }
+
+  &__glass {
+    width: 929px;
+    height: 559px;
+    background-image: radial-gradient($card-glass-bg);
+    border: 1px solid $gray;
+    border-radius: 50%;
+    box-shadow: $card-glass-shadow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    left: -70%;
+    bottom: 110%;
+    transition: all 0.3s;
+  }
+
+  &__glass-content {
+    width: 40%;
+    height: 180px;
+    padding: 0 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__description {
+    text-align: justify;
+    color: #fff;
+    font-size: 1.2rem;
+  }
+
+  &__buttons-container {
+    width: 100%;
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    text-decoration: none;
+    display: flexbox;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+// Contact Form
+.contact {
+  position: relative;
+  margin-top: 50px;
+  width: 100%;
+  height: 559px;
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__title-container {
+    width: 43%;
+    display: flex;
+    padding: 0 5px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 6.4rem;
+    color: $dark-blue;
+    text-align: center;
+  }
+
+  &__content-container {
+    flex-grow: 1;
+    height: 100%;
+    padding: 63px 150px;
+    background-color: $light-blue;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 909px;
+      height: 909px;
+      border-radius: 50%;
+      z-index: 1;
+      background-color: #fff;
+      left: -812px;
+      top: -174px;
+    }
+  }
+
+  &__form {
+    width: 387px;
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+  }
+
+  &__input-container {
+    width: 100%;
+    height: 48px;
+  }
+
+  &__label {
+    padding: 0 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    border-bottom: 3px solid $cyan;
+  }
+
+  &__input {
+    flex-grow: 1;
+    height: 100%;
+    vertical-align: bottom;
+    font-size: 2.4rem;
+    border: none;
+    background-color: transparent;
+    color: $cyan;
+    outline: none;
+
+    &::placeholder {
+      color: $cyan;
+      opacity: 0.6;
+    }
+  }
+
+  &__error-icon {
+    display: none;
+  }
+
+  &__error {
+    height: 10px;
+    font-size: 1.2rem;
+    text-align: right;
+    color: $color-error;
+    font-weight: 500;
+    display: none;
+  }
+
+  &__comment {
+    height: 192px;
+    border-radius: 10px;
+    background-color: $cyan;
+    padding: 10px;
+    font-size: 1.6rem;
+    color: $gray;
+
+    &::placeholder {
+      font-family: "Roboto", sans-serif;
+      opacity: 0.6;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    z-index: 10;
+  }
+}

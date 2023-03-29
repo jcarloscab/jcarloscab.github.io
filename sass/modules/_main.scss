@@ -1,0 +1,111 @@
+main {
+  width: 100%;
+}
+
+// Knowledges section
+.knowledges {
+  width: 100%;
+  max-width: 1440px;
+  margin-top: 50px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+}
+
+.design {
+  width: 100%;
+  display: flex;
+  background-color: $cyan;
+
+  &__img-container {
+    width: 50%;
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__icons {
+    margin-bottom: 40px;
+  }
+
+  &__description {
+    color: $blue;
+    width: 80%;
+    text-align: justify;
+
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+.develope {
+  @extend .design;
+
+  &__img-container {
+    width: 50%;
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__icons {
+    margin-bottom: 20px;
+    row-gap: 20px;
+  }
+
+  &__description {
+    color: $blue;
+    width: 80%;
+    text-align: justify;
+  }
+}
+
+// Projects Section
+.projects {
+  @extend .knowledges;
+  max-width: 1200px;
+
+  &__title {
+    @extend .knowledges__title;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(325px, 386px));
+    gap: 20px;
+  }
+}
