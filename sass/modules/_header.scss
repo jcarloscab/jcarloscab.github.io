@@ -6,10 +6,32 @@
   display: flex;
   box-shadow: 0 4px 13px rgba(0, 0, 0, 0.5);
 
+  @include media.desktop-1024 {
+    height: 450px;
+  }
+  @include media.tablet-768 {
+    height: 326px;
+  }
+
+  @include media.mobile-425 {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
   &__img-container {
-    width: 427px;
+    width: 30%;
     height: 100%;
     position: relative;
+
+    @include media.mobile-425 {
+      width: 125px;
+      height: 125px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid $cyan;
+      margin-top: 25px;
+    }
 
     &::before {
       content: "";
@@ -17,6 +39,10 @@
       height: 100%;
       background-image: linear-gradient($photo-glass);
       position: absolute;
+
+      @include media.mobile-425 {
+        display: none;
+      }
     }
   }
 
@@ -27,10 +53,14 @@
   }
 
   &__content {
-    flex-grow: 1;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+
+    @include media.mobile-425 {
+      width: 100%;
+    }
   }
 
   &__text-container {
@@ -39,6 +69,10 @@
     justify-content: center;
     align-items: flex-start;
     padding-top: 50px;
+
+    @include media.tablet-768 {
+      padding-top: 10px;
+    }
   }
 
   &__text {
@@ -46,57 +80,59 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    width: 710px;
+    width: 80%;
+
+    @include media.tablet-768 {
+      width: 429px;
+    }
+
+    @include media.mobile-425 {
+      width: 100%;
+    }
   }
 
   &__presentation {
     color: $light-blue;
+    font-weight: 400;
+
+    @include media.desktop-1024 {
+      font-size: 2.4rem;
+    }
+
+    @include media.mobile-425 {
+      font-size: 1.6rem;
+    }
   }
 
   &__title {
     color: $cyan;
+
+    @include media.desktop-1024 {
+      font-size: 4rem;
+    }
+
+    @include media.tablet-768 {
+      font-size: 3.6rem;
+    }
+
+    @include media.mobile-425 {
+      font-size: 3rem;
+    }
   }
 
   &__description {
     @extend .header__presentation;
     padding: 0 20px;
     text-align: justify;
-  }
-}
 
-.top-menu {
-  display: flex;
-  padding: 25px 50px 10px 0;
-  justify-content: flex-end;
-  gap: 20px;
-
-  &__item {
-    cursor: pointer;
-    width: 48px;
-    height: 48px;
-  }
-
-  .email {
-    background-image: url(../../img/email.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: all 0.3s;
-
-    &:hover {
-      background-image: url(../../img/email-hover.svg);
+    @include media.desktop-1024 {
+      padding-bottom: 10px;
+      font-size: 1.6rem;
     }
-  }
 
-  .github {
-    background-image: url(../../img/github-button.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: all 0.3s;
-
-    &:hover {
-      background-image: url(../../img/github-button-hover.svg);
+    @include media.mobile-425 {
+      padding-bottom: 10px;
+      font-size: 1.2rem;
     }
   }
 }

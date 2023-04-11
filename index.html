@@ -18,6 +18,12 @@
     <!--******************** header *******************************-->
     <header class="header">
       <picture class="header__img-container">
+        <source
+          media="(max-width: 425px)"
+          class="header__photo"
+          alt="perfil photo"
+          srcset="./img/cara.png"
+        />
         <img
           src="./img/foto-perfil.png"
           alt="perfil photo"
@@ -63,7 +69,7 @@
           </picture>
           <div class="design__content">
             <h4 class="design__title">Diseño Web</h4>
-            <div class="design__icons icons-container">
+            <div class="icons-container design__icons">
               <figure class="icon">
                 <img
                   src="./img/figma.svg"
@@ -118,7 +124,7 @@
         <article class="develope">
           <div class="develope__content">
             <h4 class="develope__title">Desarrollo Web</h4>
-            <div class="develope__icons icons-container">
+            <div class="icons-container develope__icons">
               <figure class="icon">
                 <img
                   src="./img/html5.svg"
@@ -148,6 +154,16 @@
                   class="icon__img"
                 />
                 <figcaption class="icon__title">JavaScript</figcaption>
+              </figure>
+              <figure class="icon">
+                <img
+                  src="./img/react.svg"
+                  aria-hidden="true
+                "
+                  alt=""
+                  class="icon__img"
+                />
+                <figcaption class="icon__title">React</figcaption>
               </figure>
               <figure class="icon">
                 <img
@@ -212,6 +228,65 @@
       <section class="projects">
         <h3 class="projects__title">Últimos Proyectos</h3>
         <div class="projects__cards">
+          <article class="project-card">
+            <picture class="project-card__img-container">
+              <img
+                src="./img/design.jpg"
+                alt="imagen del proyecto"
+                class="project-card__img"
+              />
+            </picture>
+            <div class="project-card__icons-container">
+              <picture class="mini-icon">
+                <img
+                  src="./img/html5.svg"
+                  aria-hidden="true"
+                  alt=""
+                  class="mini-icon__img"
+                />
+              </picture>
+              <picture class="mini-icon">
+                <img
+                  src="./img/css3.svg"
+                  aria-hidden="true"
+                  alt=""
+                  class="mini-icon__img"
+                />
+              </picture>
+              <picture class="mini-icon">
+                <img
+                  src="./img/javascript.svg"
+                  aria-hidden="true"
+                  alt=""
+                  class="mini-icon__img"
+                />
+              </picture>
+            </div>
+            <h5 class="project-card__title">
+              Lorem ipsum dolor sit amet consectetur. Suscipit diam varius
+              phasellus nulla ac vulputate arcu eget.
+            </h5>
+            <div class="project-card__glass">
+              <div class="project-card__glass-content">
+                <p class="project-card__description">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui
+                  laudantium soluta rerum debitis quas incidunt doloribus
+                  similique, soluta rerum debitis quas incidunt doloribus
+                  similique,
+                </p>
+                <div class="project-card__buttons-container">
+                  <a href="#" class="button glass-button project-card__link">
+                    <span>ir a Web</span>
+                    <img src="./img/web.svg" aria-hidden="true" alt="" />
+                  </a>
+                  <a href="#" class="button glass-button project-card__link">
+                    <span>ver Código</span>
+                    <img src="./img/web.svg" aria-hidden="true" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
           <article class="project-card">
             <picture class="project-card__img-container">
               <img

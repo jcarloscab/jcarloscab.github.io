@@ -7,6 +7,11 @@
   align-items: center;
   justify-content: center;
   gap: 50px;
+
+  @include media.mobile-425 {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .author {

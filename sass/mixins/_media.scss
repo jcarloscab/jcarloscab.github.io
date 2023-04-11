@@ -1,5 +1,16 @@
+@mixin desktop-1024 {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
 @mixin tablet-768 {
-  @media screen and (max-width: 744px) {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile-425 {
+  @media screen and (max-width: 425px) {
     @content;
   }
 }
