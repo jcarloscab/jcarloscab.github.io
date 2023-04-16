@@ -1,0 +1,67 @@
+{
+  "projects": [
+    {
+      "img": "./img/projects/news-homepage.png",
+      "alt": "imagen de homepage de noticias",
+      "icons": ["html5", "css3", "javascript", "sass"],
+      "title": "Práctica de Frontend Mentor de una Homepage de noticias con layout distribuído con Grid",
+      "description": "Práctica extraída del portal de Frontend Mentor para realizar una HomePage de noticias con un layout realizado con Grid y complementado con Flexbox. He utilizado JavaScript para los efectos de aparecer y desaparecer el menú en la versión mobile. En esta ocasión he utilizado sass para preprocesar el css y bem para las clases.",
+      "web": "https://jcarloscab.github.io/news-homepage-main/",
+      "code": "https://github.com/jcarloscab/news-homepage-main"
+    },
+    {
+      "img": "./img/projects/intro-component-signup.png",
+      "alt": "imagen de sección de registro",
+      "icons": ["html5", "css3", "javascript", "sass"],
+      "title": "Práctica de Frontend Mentor de sección de registro con validación",
+      "description": "Práctica extraída del portal de Frontend Mentor para realizar una sección de registro con html, Css y JavaScript de forma que se haga una cierta validación de los inputs mediante javascript. En esta ocasión he utilizado sass para preprocesar el css y bem para las clases.",
+      "web": "https://jcarloscab.github.io/intro-component-with-signup-form-master/",
+      "code": "https://github.com/jcarloscab/intro-component-with-signup-form-master"
+    },
+    {
+      "img": "./img/projects/interactive-rating-component.png",
+      "alt": "imagen de tarjeta de valoración",
+      "icons": ["html5", "css3", "javascript", "sass"],
+      "title": "Práctica de Frontend Mentor de una tarjeta de valoración",
+      "description": "Práctica extraída del portal de Frontend Mentor para realizar una tarjeta valoración del 1 al 5 con html, Css y JavaScript de forma que se interactúe para seleccionar y deseleccionar las opciones para enviar la definitiva. En esta ocasión he utilizado sass para preprocesar el css y bem para las clases.",
+      "web": "https://jcarloscab.github.io/interactive-rating-component-main/",
+      "code": "https://github.com/jcarloscab/interactive-rating-component-main"
+    },
+    {
+      "img": "./img/projects/faq-accordion-card.png",
+      "alt": "imagen de tarjeta de preguntas frecuentes",
+      "icons": ["html5", "css3", "sass"],
+      "title": "Práctica de Frontend Mentor de una tarjeta de Preguntas frecuentes en acordeón responsiva",
+      "description": "Práctica extraída del portal de Frontend Mentor para realizar una tarjeta de preguntas frecuentes con el sistema de acordeón únicamente con html y Css con flexbox practicando también la disposición de imágenes superpuestas y que funcione de forma responsiva. En esta ocasión he utilizado sass para preprocesar el css y bem para las clases.",
+      "web": "https://jcarloscab.github.io/faq-accordion-card-main/",
+      "code": "https://github.com/jcarloscab/faq-accordion-card-main"
+    },
+    {
+      "img": "./img/projects/four-card-feature-section.png",
+      "alt": "imagen de sección de tarjetas informativas",
+      "icons": ["html5", "css3", "sass"],
+      "title": "Práctica de Frontend Mentor de una Sección de tarjetas informativas responsiva",
+      "description": "Práctica extraída del portal de Frontend Mentor para realizar sección de una página que presenta unas tarjetas informativas. La intención es practicar un layout únicamente con html y Css con flexbox para presentar las tarjetas de una forma visual y que funcione de forma responsiva. En esta ocasión he utilizado sass para preprocesar el css y bem para las clases.",
+      "web": "https://jcarloscab.github.io/four-card-feature-section-master/",
+      "code": "https://github.com/jcarloscab/four-card-feature-section-master"
+    },
+    {
+      "img": "./img/projects/stats-preview-card.png",
+      "alt": "imagen de tarjeta de estadísticas",
+      "icons": ["html5", "css3", "sass"],
+      "title": "Práctica de Frontend Mentor de Tarjeta de estadísticas responsiva",
+      "description": "Práctica extraída del portal de Frontend Mentor para realizar una tarjeta de estadísticas únicamente con html y Css con flexbox que funcione de forma responsiva. En esta ocasión he utilizado sass para preprocesar el css y bem para las clases.",
+      "web": "https://jcarloscab.github.io/stats-preview-card-component-main/",
+      "code": "https://github.com/jcarloscab/stats-preview-card-component-main"
+    },
+    {
+      "img": "./img/projects/product-card.png",
+      "alt": "imagen de tarjeta de Producto",
+      "icons": ["html5", "css3"],
+      "title": "Práctica de Frontend Mentor de Tarjeta de Producto responsiva",
+      "description": "Práctica extraída del portal de Frontend Mentor para realizar una tarjeta de producto únicamente con html y Css con flex que funcione de forma responsiva y presente efectos de interactividad.",
+      "web": "https://jcarloscab.github.io/product-card/",
+      "code": "https://github.com/jcarloscab/product-card"
+    }
+  ]
+}
