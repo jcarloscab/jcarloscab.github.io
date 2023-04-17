@@ -11,7 +11,6 @@ const showProjects = async () => {
 
   // rellenamos el contenedor de proyectos solo con los 12 primeros proyectos si los hubiera.
   const projects = arrayProjects.filter((project, index) => index < 12);
-  const getIcons = (icons) => {};
 
   projects.forEach((project) => {
     const { img, alt, icons, title, description, web, code } = project;
