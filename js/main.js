@@ -1,5 +1,6 @@
 // variables
 const projectSection = document.getElementById("projects");
+const btn = document.getElementById("submit");
 
 // presentar projectos
 const showProjects = async () => {
@@ -71,3 +72,37 @@ const showProjects = async () => {
 };
 
 showProjects();
+
+// Enviar Formulario
+
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    const serviceID = "default_service";
+    const templateID = "template_ofnfhyd";
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const comment = document.getElementById("comment");
+    const contactLabel = document.querySelectorAll(".contact__label");
+    const errorIcon = document.querySelectorAll(".contact__error-icon");
+    const errorMessage = document.querySelectorAll(".contact__error");
+
+    if (!name.value) {
+      errorMessage[0].textContent = "Debes introducir un Nombre";
+      return;
+    }
+
+    btn.value = "Enviando...";
+    emailjs.sendForm(serviceID, templateID, this).then(
+      () => {
+        btn.value = "Enviar";
+        alert("Formulario Enviado! Muchas gracias por tu Tiempo y confianza");
+      },
+      (err) => {
+        btn.value = "Enviar";
+        alert(JSON.stringify(err));
+      }
+    );
+  });
+// Fin de enviar Formulario
