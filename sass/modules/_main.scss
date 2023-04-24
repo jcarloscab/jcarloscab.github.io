@@ -157,6 +157,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3, minmax(325px, 386px));
     gap: 20px;
+    row-gap: 60px;
 
     @include media.tablet-768 {
       grid-template-columns: repeat(2, minmax(325px, 386px));
@@ -164,6 +165,7 @@ main {
 
     @include media.mobile-425 {
       grid-template-columns: 325px;
+      row-gap: 40px;
     }
   }
 

@@ -134,6 +134,12 @@
   background-color: $cyan;
   box-shadow: $card-shadow;
   position: relative;
+  opacity: 0;
+  transition: all 1s;
+
+  &--show {
+    opacity: 1;
+  }
 
   &:hover {
     .project-card__glass {

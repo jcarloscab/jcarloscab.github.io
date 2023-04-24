@@ -5,6 +5,22 @@ const buttonMoreContainer = document.getElementById("more-projects");
 let lastIndex = 0;
 
 //* presentar projectos
+// manejo del fade in de los proyectos.
+const handleShowProject = (projects) => {
+  projects.forEach((project) => {
+    if (project.isIntersecting) {
+      const classes = project.target.classList;
+      classes.add("project-card--show");
+    } else {
+      const classes = project.target.classList;
+      classes.remove("project-card--show");
+    }
+  });
+};
+
+const observer = new IntersectionObserver(handleShowProject, {
+  rootMargin: "-10%",
+});
 
 // funcion para añadir el siguiente lote de proyectos cuando pulsemos el boton de cargar más.
 const moreProjects = () => {
@@ -81,6 +97,11 @@ const showProjects = async () => {
     projectsFragment.appendChild(projectContainer);
   });
   projectsContainer.appendChild(projectsFragment);
+
+  // ponemos en observacion cada proyecto para el efecto de aparición.
+  document.querySelectorAll(".project-card").forEach((project) => {
+    observer.observe(project);
+  });
 
   // si existen más proyectos para cargar añadimos un botón para poder cargarlos.
   if (lastIndex < arrayProjects.length) {
