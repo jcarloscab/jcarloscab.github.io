@@ -1,17 +1,30 @@
-// variables
-const projectSection = document.getElementById("projects");
+// variables generales
+const projectsContainer = document.getElementById("projects");
 const btn = document.getElementById("submit");
+const buttonMoreContainer = document.getElementById("more-projects");
+let lastIndex = 0;
 
-// presentar projectos
+//* presentar projectos
+
+// funcion para añadir el siguiente lote de proyectos cuando pulsemos el boton de cargar más.
+const moreProjects = () => {
+  // borramos el boton de cargar más proyectos para añadir el siguiente lote.
+  const buttonMore = document.getElementById("more");
+  buttonMoreContainer.removeChild(buttonMore);
+  showProjects();
+};
+
+// función que va a cargar 12 proyectos cada vez que se le llame.
 const showProjects = async () => {
   const datas = await (await fetch("./projects.txt")).json();
   const arrayProjects = datas.projects;
   const projectsFragment = document.createDocumentFragment();
-  const projectsContainer = document.createElement("div");
-  projectsContainer.setAttribute("class", "projects__cards");
 
-  // rellenamos el contenedor de proyectos solo con los 12 primeros proyectos si los hubiera.
-  const projects = arrayProjects.filter((project, index) => index < 12);
+  // filtramos del array de todos los proyectos el lote a añadir
+  const projects = arrayProjects.filter(
+    (project, index) => index >= lastIndex && index < lastIndex + 12
+  );
+  lastIndex += 12;
 
   projects.forEach((project) => {
     const { img, alt, icons, title, description, web, code } = project;
@@ -65,16 +78,22 @@ const showProjects = async () => {
         </div>
       </div>
     `;
-    projectsContainer.appendChild(projectContainer);
+    projectsFragment.appendChild(projectContainer);
   });
-  projectsFragment.appendChild(projectsContainer);
-  projectSection.appendChild(projectsFragment);
+  projectsContainer.appendChild(projectsFragment);
+
+  // si existen más proyectos para cargar añadimos un botón para poder cargarlos.
+  if (lastIndex < arrayProjects.length) {
+    buttonMoreContainer.innerHTML = `
+    <button id="more" class="button">Cargar más Proyectos</button>`;
+    document.getElementById("more").addEventListener("click", moreProjects);
+  }
 };
 
 showProjects();
+// * Fin de Presentar proyectos
 
-// Enviar Formulario
-
+//* Enviar Formulario
 document
   .getElementById("contact-form")
   .addEventListener("submit", function (event) {
@@ -105,4 +124,4 @@ document
       }
     );
   });
-// Fin de enviar Formulario
+//* Fin de enviar Formulario

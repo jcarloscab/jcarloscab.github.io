@@ -778,6 +778,12 @@ main {
     grid-template-columns: 325px;
   }
 }
+.projects__more {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
 .footer {
   margin-top: 50px;
