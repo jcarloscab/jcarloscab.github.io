@@ -351,6 +351,11 @@
     align-items: center;
     gap: 2px;
     border-bottom: 3px solid $cyan;
+
+    &--error {
+      border: 2px solid $color-error;
+      border-radius: 10px;
+    }
   }
 
   &__input {
@@ -369,30 +374,42 @@
     }
   }
 
-  &__comment {
-    outline: none;
-  }
-
   &__error-icon {
     display: none;
+
+    &--show {
+      display: block;
+    }
   }
 
   &__error {
-    height: 10px;
     font-size: 1.2rem;
     text-align: right;
     color: $color-error;
     font-weight: 500;
     display: none;
+
+    &--comment {
+      margin-top: -25px;
+    }
+
+    &--show {
+      display: block;
+    }
   }
 
   &__comment {
+    outline: none;
     height: 192px;
     border-radius: 10px;
     background-color: $cyan;
     padding: 10px;
     font-size: 1.6rem;
     color: $gray;
+
+    &--error {
+      border: 2px solid $color-error;
+    }
 
     &::placeholder {
       font-family: "Roboto", sans-serif;

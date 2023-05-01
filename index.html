@@ -229,8 +229,7 @@
       <section class="projects">
         <h3 class="projects__title">Últimos Proyectos</h3>
         <div id="projects" class="projects__cards"></div>
-        <div id="more-projects" class="projects__more">
-        </div>
+        <div id="more-projects" class="projects__more"></div>
       </section>
       <section id="contact" class="contact">
         <div class="contact__title-container">
@@ -251,7 +250,6 @@
                   id="name"
                   class="contact__input"
                   placeholder="Nombre"
-                  requeried
                 />
                 <img
                   src="./img/error.svg"
@@ -260,17 +258,16 @@
                   class="contact__error-icon"
                 />
               </label>
-              <p class="contact__error">error</p>
+              <p class="contact__error"></p>
             </div>
             <div class="contact__input-container">
               <label for="email" class="contact__label">
                 <input
-                  type="email"
+                  type="text"
                   name="email"
                   id="email"
                   class="contact__input"
                   placeholder="Email"
-                  requeried
                 />
                 <img
                   src="./img/error.svg"
@@ -279,7 +276,7 @@
                   class="contact__error-icon"
                 />
               </label>
-              <p class="contact__error">error</p>
+              <p class="contact__error"></p>
             </div>
             <textarea
               name="comment"
@@ -287,6 +284,7 @@
               class="contact__comment"
               placeholder="Coméntame qué necesitas..."
             ></textarea>
+            <p class="contact__error contact__error--comment"></p>
             <input
               type="submit"
               name="submit"

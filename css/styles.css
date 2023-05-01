@@ -401,6 +401,10 @@ a {
   gap: 2px;
   border-bottom: 3px solid #e8fbfd;
 }
+.contact__label--error {
+  border: 2px solid rgba(201, 18, 18, 0.8);
+  border-radius: 10px;
+}
 .contact__input {
   flex-grow: 1;
   height: 100%;
@@ -419,27 +423,36 @@ a {
   color: #e8fbfd;
   opacity: 0.6;
 }
-.contact__comment {
-  outline: none;
-}
 .contact__error-icon {
   display: none;
 }
+.contact__error-icon--show {
+  display: block;
+}
 .contact__error {
-  height: 10px;
   font-size: 1.2rem;
   text-align: right;
-  color: #fa0101;
+  color: rgba(201, 18, 18, 0.8);
   font-weight: 500;
   display: none;
 }
+.contact__error--comment {
+  margin-top: -25px;
+}
+.contact__error--show {
+  display: block;
+}
 .contact__comment {
+  outline: none;
   height: 192px;
   border-radius: 10px;
   background-color: #e8fbfd;
   padding: 10px;
   font-size: 1.6rem;
   color: #919696;
+}
+.contact__comment--error {
+  border: 2px solid rgba(201, 18, 18, 0.8);
 }
 .contact__comment::-moz-placeholder {
   font-family: "Roboto", sans-serif;

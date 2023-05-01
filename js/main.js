@@ -1,11 +1,12 @@
+//*---------------------------------- presentar projectos  --------------------------/
 // variables generales
 const projectsContainer = document.getElementById("projects");
 const btn = document.getElementById("submit");
 const buttonMoreContainer = document.getElementById("more-projects");
 let lastIndex = 0;
 
-//* presentar projectos
-// manejo del fade in de los proyectos.
+// Funciones
+// manejo del fadein de los proyectos.
 const handleShowProject = (projects) => {
   projects.forEach((project) => {
     if (project.isIntersecting) {
@@ -112,24 +113,66 @@ const showProjects = async () => {
 };
 
 showProjects();
-// * Fin de Presentar proyectos
 
-//* Enviar Formulario
+//*---------------------------------- Fin de Presentar proyectos  --------------------------/
+
+//*---------------------------------- Enviar Formulario  --------------------------/
+// variables
+const contactLabel = document.querySelectorAll(".contact__label");
+const contactInput = document.querySelectorAll(".contact__input");
+const comment = document.getElementById("comment");
+const errorIcon = document.querySelectorAll(".contact__error-icon");
+const errorMessage = document.querySelectorAll(".contact__error");
+
+// Funciones
+const showInputError = (i, message) => {
+  contactLabel[i].classList.add("contact__label--error");
+  errorIcon[i].classList.add("contact__error-icon--show");
+  errorMessage[i].textContent = message;
+  errorMessage[i].classList.add("contact__error--show");
+};
+
+const showComentError = (i, message) => {
+  comment.classList.add("contact__comment--error");
+  errorMessage[i].textContent = message;
+  errorMessage[i].classList.add("contact__error--show");
+};
+
+// listeners
 document
   .getElementById("contact-form")
   .addEventListener("submit", function (event) {
     event.preventDefault();
     const serviceID = "default_service";
     const templateID = "template_ofnfhyd";
-    const name = document.getElementById("name");
-    const email = document.getElementById("email");
-    const comment = document.getElementById("comment");
-    const contactLabel = document.querySelectorAll(".contact__label");
-    const errorIcon = document.querySelectorAll(".contact__error-icon");
-    const errorMessage = document.querySelectorAll(".contact__error");
+    const firstName = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    let isError = false;
 
-    if (!name.value) {
-      errorMessage[0].textContent = "Debes introducir un Nombre";
+    // validamos el nombre.
+    if (!firstName) {
+      const message = "Debes introducir un Nombre";
+      showInputError(0, message);
+      isError = true;
+    }
+
+    // validamos el email
+    const regExp = /^\D[a-z,A-Z,0-9]+[@][a-z,A-Z,0-9]+[.]\D{2,}$/;
+
+    if (!email || !regExp.test(email)) {
+      const message = "Debes introducir un email válido";
+      showInputError(1, message);
+      isError = true;
+    }
+
+    // validamos el comentario
+    if (!comment.value) {
+      const message = "por favor, coméntame en qué puedo ayudarte";
+      showComentError(2, message);
+      isError = true;
+    }
+
+    if (isError) {
       return;
     }
 
@@ -145,4 +188,19 @@ document
       }
     );
   });
-//* Fin de enviar Formulario
+
+// listeners para limpiar los estilos de los campos con errores
+for (let i = 0; i < contactInput.length; i++) {
+  contactInput[i].addEventListener("focus", () => {
+    contactLabel[i].classList.remove("contact__label--error");
+    errorIcon[i].classList.remove("contact__error-icon--show");
+    errorMessage[i].classList.remove("contact__error--show");
+  });
+}
+
+comment.addEventListener("focus", () => {
+  comment.classList.remove("contact__comment--error");
+  errorMessage[2].classList.remove("contact__error--show");
+});
+
+//*---------------------------------- Fin de enviar Formulario  --------------------------/
