@@ -53,8 +53,20 @@
     color: $cyan;
     cursor: pointer;
   }
+
+  &--fade {
+    animation: fade 0.3s forwards;
+  }
 }
 
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 // Secundary Button
 .button-secundary {
   background-color: $green;

@@ -25,10 +25,13 @@ const observer = new IntersectionObserver(handleShowProject, {
 
 // funcion para añadir el siguiente lote de proyectos cuando pulsemos el boton de cargar más.
 const moreProjects = () => {
-  // borramos el boton de cargar más proyectos para añadir el siguiente lote.
+  // borramos el boton de cargar más proyectos con efecto fade para añadir el siguiente lote.
   const buttonMore = document.getElementById("more");
-  buttonMoreContainer.removeChild(buttonMore);
-  showProjects();
+  buttonMore.classList.add("button--fade");
+  const wait = setTimeout(() => {
+    buttonMoreContainer.removeChild(buttonMore);
+    showProjects();
+  }, 400);
 };
 
 // función que va a cargar 12 proyectos cada vez que se le llame.
