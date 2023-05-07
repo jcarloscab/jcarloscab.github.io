@@ -32,7 +32,7 @@ Portfolio creado con Html, Scss y Javascript conteniendo los conocimientos, los 
 
 ### Links
 
-- Código URL: [Solución](https://github.com/jcarloscab/jcarloscab.github.io)
+- Código URL: [Código](https://github.com/jcarloscab/jcarloscab.github.io)
 - Web URL: [Site](https://jcarloscab.github.io)
 
 ## Tecnologías
