@@ -1,6 +1,15 @@
 {
   "projects": [
     {
+      "img": "./img/projects/notification-page.png",
+      "alt": "imagen de página de notificaciones",
+      "icons": ["html5", "css3", "javascript", "sass"],
+      "title": "Práctica de Frontend Mentor de una Página de Notificaciones",
+      "description": "Práctica extraída del portal de Frontend Mentor para realizar una Página de Notificaciones leídas y No leídas donde hay que interactuar para desmarcar las No leídas de forma individual clickando sobre ellas o colectivamente mediante un botón, actualizando un contador general.",
+      "web": "https://jcarloscab.github.io/notifications-page-main/",
+      "code": "https://github.com/jcarloscab/notifications-page-main"
+    },
+    {
       "img": "./img/projects/news-homepage.png",
       "alt": "imagen de homepage de noticias",
       "icons": ["html5", "css3", "javascript", "sass"],
