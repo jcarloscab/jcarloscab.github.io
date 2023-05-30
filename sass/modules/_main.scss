@@ -127,6 +127,10 @@ main {
     @include media.mobile-425 {
       grid-template-columns: repeat(8, 1fr);
     }
+
+    @include media.mobile-320 {
+      grid-template-columns: repeat(6, 1fr);
+    }
   }
 
   &__description {
@@ -166,6 +170,10 @@ main {
     @include media.mobile-425 {
       grid-template-columns: 325px;
       row-gap: 40px;
+    }
+
+    @include media.mobile-320 {
+      grid-template-columns: 300px;
     }
   }
 

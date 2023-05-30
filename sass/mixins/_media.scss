@@ -25,3 +25,9 @@
     @content;
   }
 }
+
+@mixin mobile-320 {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}

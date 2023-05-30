@@ -183,6 +183,7 @@
   &__title {
     @include media.desktop-1024 {
       font-size: 1.4rem;
+      padding: 0 3px;
     }
 
     @include media.tablet-768 {
@@ -208,6 +209,10 @@
 
     @include media.desktop-1024 {
       width: 790px;
+    }
+
+    @include media.desktop-1024 {
+      width: 730px;
     }
   }
 
@@ -274,7 +279,7 @@
 
     @include media.tablet-768 {
       width: 100%;
-      height: 46px;
+      padding: 10px;
       border-top: 2px solid $blue;
       border-left: 2px solid $blue;
       border-right: 2px solid $blue;
