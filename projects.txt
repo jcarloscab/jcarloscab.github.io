@@ -1,6 +1,15 @@
 {
   "projects": [
     {
+      "img": "./img/projects/loopstudios-landingpage.png",
+      "alt": "imagen de landingpage de loopstudios",
+      "icons": ["html5", "css3", "javascript", "sass"],
+      "title": "Práctica de Frontend Mentor de una Landingpage",
+      "description": "Práctica extraída del portal de Frontend Mentor para realizar una Landingpage responsive utilizando grid para el layout de la galería de creaciones.",
+      "web": "https://jcarloscab.github.io/loopstudios-landing-page-main/",
+      "code": "https://github.com/jcarloscab/loopstudios-landing-page-main"
+    },
+    {
       "img": "./img/projects/notification-page.png",
       "alt": "imagen de página de notificaciones",
       "icons": ["html5", "css3", "javascript", "sass"],
